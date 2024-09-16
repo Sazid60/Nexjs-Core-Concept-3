@@ -13,9 +13,9 @@ const page = async () => {
   const postData = await getPost();
 
   // If there's post data, redirect to the first post
-  if (postData && postData.length > 0) {
-    redirect(`/posts/${postData[0].id}`);
-  }
+  // if (postData && postData.length > 0) {
+  //   redirect(`/posts/${postData[0].id}`);
+  // }
 
   return (
     <div className='min-h-screen'>
