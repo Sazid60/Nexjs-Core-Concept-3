@@ -1,6 +1,12 @@
+import { Inter, Roboto } from 'next/font/google'
+
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+
+// If loading a variable font, you don't need to specify the font weight
+const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({ weight:['400','500', '700', '900'] ,subsets: ['latin'] })
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${roboto.className} antialiased`}
       >
         <Navbar/>
         
